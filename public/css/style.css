@@ -531,16 +531,17 @@ ol.type li a:hover {
 }
 
 img.img-thumbnail.team-img {
-    width: 200px;
-    height: 200px;
     border: 0;
     border-radius: 0;
     background-color: #f6f6f6;
+		height: 100%;
+		width: 100%;
 }
 
 #team .thumbnail {
-    background: transparent;
+    /*background: transparent;*/
     border: 0;
+		width: 250px;
 }
 
 #team .thumbnail .caption {
@@ -549,7 +550,7 @@ img.img-thumbnail.team-img {
 }
 
 
-/* Testimonials Section */
+/* Apply Section */
 
 #apply {
     background: url(../img/testimonials-bg.jpg);
@@ -558,7 +559,6 @@ img.img-thumbnail.team-img {
     color: #ddd;
     padding: 140px 0;
 }
-
 
 /* Contact Section */
 
