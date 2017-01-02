@@ -1,9 +1,8 @@
 var express = require('express');
 var app = express();
 var router = express.Router();
-var __dirname = '/Users/allisontam/Desktop/Ami'
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname));
 router.get('/', function (req, res) {
     res.sendFile('index.html', {root:__dirname});
 })
