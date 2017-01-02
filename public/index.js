@@ -11,6 +11,10 @@ router.get('/apply', function (req, res) {
     res.sendFile('typeform.html', {root:__dirname});
 })
 
+router.get('/createAccount', function (req, res) {
+    res.sendFile('account.html', {root:__dirname});
+})
+
 app.use("/", router);
 
 app.listen(3000, function () {
