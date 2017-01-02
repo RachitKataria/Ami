@@ -7,6 +7,10 @@ router.get('/', function (req, res) {
     res.sendFile('index.html', {root:__dirname});
 })
 
+router.get('/apply', function (req, res) {
+    res.sendFile('typeform.html', {root:__dirname});
+})
+
 app.use("/", router);
 
 app.listen(3000, function () {
