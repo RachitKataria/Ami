@@ -208,7 +208,23 @@ hr {
 	font-size: 18px;
 	transition: all 0.5s;
 }
+
+.btn-primary {
+	color: #f6f6f6;
+	background: #cf5022;
+	border: 0;
+	padding: 12px 24px;
+	margin: 0 8px;
+	font-size: 50px;
+	transition: all 0.5s;
+}
+
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+	color: #f6f6f6;
+	background-color: #a13e1a;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active {
 	color: #f6f6f6;
 	background-color: #a13e1a;
 }
@@ -587,4 +603,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #intro .intro-body H1 {
 	font-size: 5em;
 }
+}
+
+#apply .container {
+	padding-top: 20px;
 }
