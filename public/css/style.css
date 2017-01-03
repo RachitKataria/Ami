@@ -110,7 +110,7 @@ hr {
     width: 70px;
     text-align: center;
     position: relative;
-    background: #E75926;
+    background: #fa6e23;
     margin: 0 auto;
     margin-bottom: 30px;
     border: 0;
@@ -132,7 +132,7 @@ hr {
 }
 
 .navbar-custom .navbar-brand i.fa {
-    color: #E75926;
+    color: #fa6e23;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -147,7 +147,7 @@ hr {
 }
 
 .navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
-    background-color: #E75926;
+    background-color: #fa6e23;
     color: #ffffff;
 }
 
@@ -159,6 +159,10 @@ hr {
     color: #fff;
 }
 
+.navbar-custom .nav li #applybutton {
+	color: #fa6e23;
+}
+
 .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -167,14 +171,14 @@ hr {
 
 .navbar-custom .nav li a:hover {
     outline: 0;
-    color: #E75926;
+    color: #fa6e23;
     background-color: transparent;
 }
 
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
     outline: 0;
     background-color: transparent;
-    color: #E75926;
+    color: #fa6e23;
 }
 
 .navbar-custom .nav li.active {
@@ -199,7 +203,7 @@ hr {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat center center fixed;
+    background: url(../img/b.jpg) no-repeat center center fixed;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -215,17 +219,25 @@ hr {
 #intro .intro-body H1 {
     font-size: 76px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.8);
+    /*color: rgba(255, 255, 255, 0.8);*/
+
+		/*605C4E*/
+		color: #495867;
     text-transform: uppercase;
 }
 
 #intro .intro-body .brand-heading {
     color: #E75926;
-    text-shadow: 0 4px #a13e1a;
+    text-shadow: 0 2px #a13e1a;
 }
 
 #intro .intro-body .intro-text {
     font-size: 18px;
+}
+
+#intro .intro-body #signinbutton {
+	color: #495867;
+	text-decoration: underline;
 }
 
 @media(min-width:768px) {
@@ -237,7 +249,8 @@ hr {
         font-size: 18px;
         letter-spacing: 1px;
         margin-bottom: 100px;
-        color: rgba(255, 255, 255, 0.9);
+        /*color: rgba(255, 255, 255, 0.9);*/
+				color: #495867;
     }
 }
 
@@ -309,7 +322,7 @@ hr {
     content: "✓";
     font-weight: 600;
     padding-right: 10px;
-    color: #e75926;
+    color: #fa6e23;
 }
 
 #about i.fa {
@@ -364,7 +377,7 @@ hr {
 
 #services i.fa {
     font-size: 36px;
-    color: #E75926;
+    color: #fa6e23;
     transition: all 0.5s;
 }
 
@@ -585,7 +598,7 @@ img.img-thumbnail.team-img {
 
 #contact i.fa {
     font-size: 22px;
-    color: #e75926;
+    color: #fa6e23;
     margin-bottom: 10px;
 }
 
@@ -689,7 +702,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 
 #footer a:hover, a:focus {
-    color: #e75926;
+    color: #fa6e23;
 }
 
 #footer p {

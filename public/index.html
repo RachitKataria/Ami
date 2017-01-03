@@ -50,7 +50,7 @@
                     <li> <a class="page-scroll" href="#services">Services</a> </li>
                     <li> <a class="page-scroll" href="#team">Team</a> </li>
                     <li> <a class="page-scroll" href="#contact">Contact</a> </li>
-                    <li> <a class="page-scroll" href="#apply">Apply</a> </li>
+                    <li> <a id="applybutton" class="page-scroll" href="#apply">Apply</a> </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -65,10 +65,11 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <h1>We are <span class="brand-heading">Ami</span></h1>
-                        <br>
-                        <p class="intro-text">/aˈmi/ <br> <i>noun.</i> a friend</p>
+                        <p class="intro-text">/aˈmi/ <br> <i><b>noun.</b></i> a friend</p>
                         <a href="#about" class="btn btn-default page-scroll">Learn More</a>
-                        <a href="#" data-toggle="modal" data-target="#signInModal" class="btn btn-default page-scroll">Sign In</a>
+                        <br>
+                        <br>
+                        <a id="signinbutton" href="#" data-toggle="modal" data-target="#signInModal">Sign In</a>
                     </div>
                 </div>
             </div>
@@ -84,7 +85,7 @@
                 <div class="modal-header" align="center">
                     <img class="img-circle" id="img_logo" src="/img/logo.png" alt="...">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Login</h4>
+                    <h4 class="modal-title">Sign In</h4>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -96,7 +97,7 @@
                     <a href="\createAccount">Don't have an account?</a>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default">Submit</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
                 </div>
             </div>
 
@@ -124,7 +125,9 @@
                 <div class="col-md-4">
                     <div class="about-text">
                         <h4>Our Philosophy</h4>
-                        <p>Lifelong success can only be attained with distilled interests and cultivated passions. Our mission is to frame the high school experience with what matters most: an unfettered faith in your ability to pursue. We are not tutors and we are not college counselors, but we understand that academics, extracurriculars, and college applications play a big role in success. That success, however, is built on the desire for self-confidence and self-improvement, and we’ll help you develop it.</p>
+                        <p>Lifelong success can only be attained with distilled interests and cultivated passions. Our mission is to frame the high school experience with what matters most: an unfettered faith in your ability to pursue. We are not tutors
+                            and we are not college counselors, but we understand that academics, extracurriculars, and college applications play a big role in success. That success, however, is built on the desire for self-confidence and self-improvement,
+                            and we’ll help you develop it.</p>
                     </div>
                 </div>
             </div>
