@@ -544,17 +544,16 @@ ol.type li a:hover {
 }
 
 img.img-thumbnail.team-img {
+	height: 75%;
+	width: 75%;
     border: 0;
     border-radius: 0;
     background-color: #f6f6f6;
-		height: 100%;
-		width: 100%;
 }
 
 #team .thumbnail {
-    /*background: transparent;*/
+    background: transparent;
     border: 0;
-		width: 250px;
 }
 
 #team .thumbnail .caption {
