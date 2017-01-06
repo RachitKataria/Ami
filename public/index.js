@@ -33,7 +33,7 @@ app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
 })
 
-router.post('/contact', function(req, res) {
+app.post('/contact', function(req, res) {
     console.log('submit');
 
     var con = mysql.createConnection({
