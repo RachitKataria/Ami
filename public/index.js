@@ -39,7 +39,6 @@ app.post('/contact', function(req, res) {
     var con = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "root",
         database: "ami"
     });
 
@@ -47,11 +46,14 @@ app.post('/contact', function(req, res) {
         user: req.body.email,
         pass: req.body.pwd
     };
+    
+    con.query('SELECT * FROM loginInfo', user, function(err, res) {
+        if (err) {
+            console.log(err);
+        }
 
-    con.query('INSERT INTO loginInfo SET ?', user, function(err, res) {
-        if (err) throw err;
-
-        console.log('Last insert ID:', res.insertId);
+        console.log(res)
+        console.log(user)
     });
 });
 
@@ -63,12 +65,12 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "root"
 });
 
 con.connect(function(err) {
     if (err) {
         console.log('Error connecting to Db');
+        console.log(err)
         return;
     }
     console.log('Connection established');
