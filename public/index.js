@@ -39,21 +39,32 @@ app.post('/contact', function(req, res) {
     var con = mysql.createConnection({
         host: "localhost",
         user: "root",
+        password:"root",
         database: "ami"
     });
 
-    var user = {
+    var entry = {
         user: req.body.email,
         pass: req.body.pwd
     };
-    
-    con.query('SELECT * FROM loginInfo', user, function(err, res) {
+
+    con.query('SELECT * FROM loginInfo', entry, function(err, res) {
         if (err) {
             console.log(err);
         }
 
         console.log(res)
-        console.log(user)
+        console.log(entry)
+    });
+
+    // Code to insert user into database
+    console.log(entry.user);
+    console.log(entry.pass);
+
+    con.query('INSERT INTO loginInfo SET ?', entry, function(err, res) {
+        if (err) throw err;
+
+        console.log('Last insert ID:', res.insertId);
     });
 });
 
