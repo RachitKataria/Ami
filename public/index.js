@@ -21,6 +21,12 @@ router.get('/apply', function(req, res) {
     });
 })
 
+router.get('/portal', function(req, res) {
+    res.sendFile('portal.html', {
+        root: __dirname
+    });
+})
+
 router.get('/createAccount', function(req, res) {
     res.sendFile('account.html', {
         root: __dirname
@@ -33,13 +39,10 @@ app.listen(3000, function() {
     console.log('Example app listening on port 3000!')
 })
 
-app.post('/contact', function(req, res) {
-    console.log('submit');
-
+app.post('/create', function(req,res) {
     var con = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password:"root",
         database: "ami"
     });
 
@@ -47,15 +50,6 @@ app.post('/contact', function(req, res) {
         user: req.body.email,
         pass: req.body.pwd
     };
-
-    con.query('SELECT * FROM loginInfo', entry, function(err, res) {
-        if (err) {
-            console.log(err);
-        }
-
-        console.log(res)
-        console.log(entry)
-    });
 
     // Code to insert user into database
     console.log(entry.user);
@@ -65,6 +59,38 @@ app.post('/contact', function(req, res) {
         if (err) throw err;
 
         console.log('Last insert ID:', res.insertId);
+    });
+});
+
+app.post('/contact', function(req, res) {
+    console.log('submit');
+
+    var con = mysql.createConnection({
+        host: "localhost",
+        user: "root",
+        database: "ami"
+    });
+
+    var entry = {
+        user: req.body.email,
+        pass: req.body.pwd
+    };
+
+    //con.query("SELECT * FROM loginInfo WHERE user='test@ami.com' AND pass='test'", entry, function(err, res) {
+    con.query("SELECT * FROM loginInfo WHERE user='"+entry.user+"' AND pass='" + entry.pass+"'",entry, function(err, results) {
+    //con.query("SELECT * FROM loginInfo WHERE user=? AND pass=?",[entry.user,entry.pass], function(err, res) {
+        if (err) {
+            console.log(err);
+        }
+
+        //console.log(entry)
+        //console.log(results)
+        console.log(results.length)
+        if (results.length == 1){
+            res.redirect(301, '/portal')
+        } else {
+            res.redirect(301, '/');
+        }
     });
 });
 
